@@ -6,7 +6,7 @@ title: Run the Docker daemon as a non-root user (Rootless mode)
 
 Rootless mode allows running the Docker daemon and containers as a non-root
 user, for the sake of mitigating potential vulnerabilities in the daemon and
-the container runtime.
+the container runtime.`
 
 Rootless mode does not require root privileges even for installation of the
 Docker daemon, as long as [the prerequisites](#prerequisites) are satisfied.
@@ -144,7 +144,7 @@ $ curl -fsSL https://get.docker.com/rootless | sh
 # WARN: dockerd is not in your current PATH or pointing to /home/testuser/bin/dockerd
 # Make sure the following environment variables are set (or add them to ~/.bashrc):
 
-export PATH=/home/testuser:/bin:$PATH
+export PATH=/home/testuser/bin:$PATH
 export PATH=$PATH:/sbin
 export DOCKER_HOST=unix:///run/user/1001/docker.sock
 
